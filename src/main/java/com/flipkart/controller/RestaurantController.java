@@ -20,12 +20,12 @@ public class RestaurantController {
         return restaurantMgmtService.findAllRestaurants();
     }
 
-   @PostMapping("add-restaurant")
+   @PostMapping("/add-restaurant")
     public RestaurantMgmtAPIResponse addRestaurant(@RequestBody AddRestaurantReq addRestaurantReq){
         return restaurantMgmtService.add(addRestaurantReq);
    }
 
-    @PostMapping("place-order")
+    @PostMapping("/place-order")
     public RestaurantMgmtAPIResponse addRestaurant(@RequestBody PlaceOrderReq placeOrderReq){
         return restaurantMgmtService.placeOrder(placeOrderReq);
     }
